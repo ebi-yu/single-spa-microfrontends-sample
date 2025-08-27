@@ -11,7 +11,13 @@ import { registerApplication, start } from "single-spa";
 registerApplication<Record<string, never>>({
   name: "vue-app",
   app: async () => System.import("vue-app"),
-  activeWhen: ["/"],
+  activeWhen: ["/vue"],
+  customProps: {},
+});
+registerApplication<Record<string, never>>({
+  name: "react-app",
+  app: async () => System.import("react-app"),
+  activeWhen: ["/react"],
   customProps: {},
 });
 

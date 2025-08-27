@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --mode standalone",
-    "start": "vite preview",
+    "preview": "vite preview",
     "build": "pnpm lint && vite build",
     "lint": "oxlint src/ --fix"
   },

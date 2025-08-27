@@ -1,0 +1,23 @@
+{
+  "name": "react-app",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode standalone",
+    "build": "pnpm lint && vite build",
+    "lint": "oxlint src/ --fix",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "single-spa-react": "^6.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "vite-plugin-css-injected-by-js": "^3.5.2"
+  }
+}

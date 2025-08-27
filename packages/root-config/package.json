@@ -3,11 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite --port 9000",
-    "build": "pnpm lint && vite build",
     "lint": "oxlint src/ --fix"
   },
   "dependencies": {
     "single-spa": "^6.0.3"
-  },
-  "types": "dist/n-root-config.d.ts"
+  }
 }
