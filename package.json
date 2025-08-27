@@ -1,13 +1,13 @@
 {
   "name": "single-spa-microfrontends-sample",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@9.0.0",
   "scripts": {
     "build": "turbo build",
-    "dev": "run-p dev:*",
-    "dev:react": "cd ./packages/react-app && pnpm preview",
-    "dev:vue": "cd ./packages/vue-app && pnpm preview",
-    "dev:root": "cd ./packages/root-config && pnpm dev",
+    "start": "run-p start:*",
+    "start:react": "cd ./packages/react-app && pnpm preview",
+    "start:vue": "cd ./packages/vue-app && pnpm preview",
+    "start:root": "cd ./packages/root-config && pnpm dev",
     "lint": "turbo lint"
   },
   "devDependencies": {
