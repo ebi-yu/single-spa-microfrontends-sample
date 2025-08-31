@@ -9,3 +9,5 @@
 ### 0.0.2
 
 - Add Single-SPA React Micro-frontend
+- Update README.md
+- Fix Root-config index.html style
