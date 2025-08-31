@@ -1,53 +1,55 @@
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Single-SPA</title>
-    <!-- 1. SystemJSライブラリのインポート -->
-    <script src="https://unpkg.com/systemjs/dist/system.min.js"></script>
-    <!--2. Import Mapによる依存関係の読み込み  -->
-    <script type="systemjs-importmap">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Single-SPA</title>
+  <!-- 1. SystemJSライブラリのインポート -->
+  <script src="https://unpkg.com/systemjs/dist/system.min.js"></script>
+  <!--2. Import Mapによる依存関係の読み込み  -->
+  <script type="systemjs-importmap">
       {
         "imports": {
           "single-spa": "https://unpkg.com/single-spa/lib/system/single-spa.min.js",
-          "vue-app": "http://localhost:4173/assets/0.0.1-main.js",
+          "vue-app": "http://localhost:4173/assets/0.0.2-main.js",
           "vue": "https://unpkg.com/vue@3/dist/vue.global.js",
-          "react-app": "http://localhost:4174/assets/0.0.1-main.js",
+          "react-app": "http://localhost:4174/assets/0.0.2-main.js",
           "react": "https://unpkg.com/react@19/umd/react.production.min.js",
           "react-dom": "https://unpkg.com/react-dom@19/umd/react-dom.production.min.js"
         }
       }
     </script>
-  </head>
-  <body>
-    <!-- 3. main.tsの呼び出し  -->
-    <script type="module" src="/src/main.ts"></script>
-    <div style="position: fixed; top: 0; width: 100vw; display: flex; gap: 1rem">
-      <button
-        style="
-          padding: 10px;
-          width: 8rem;
-          background-color: aquamarine;
-          border-radius: 5px;
-          font-size: large;
-        "
-        onclick="location.href='http://localhost:9000/vue'"
-      >
-        TO Vue single-spa
-      </button>
-      <button
-        style="
-          padding: 10px;
-          width: 8rem;
-          background-color: lightcoral;
-          border-radius: 5px;
-          font-size: large;
-        "
-        onclick="location.href='http://localhost:9000/react'"
-      >
-        TO React single-spa
-      </button>
-    </div>
-  </body>
+</head>
+
+<body>
+  <!-- 3. main.tsの呼び出し  -->
+  <script type="module" src="/src/main.ts"></script>
+  <div class="header">
+    <button style="background-color: aquamarine;" onclick="location.href='http://localhost:9000/vue'">
+      TO Vue single-spa
+    </button>
+    <button style="background-color: lightcoral;" onclick="location.href='http://localhost:9000/react'">
+      TO React single-spa
+    </button>
+  </div>
+  <style>
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .header button {
+      padding: 10px;
+      width: 8rem;
+      border-radius: 5px;
+      font-size: large;
+    }
+  </style>
+</body>
+
 </html>
