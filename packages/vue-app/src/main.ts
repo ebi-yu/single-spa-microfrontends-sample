@@ -5,7 +5,7 @@ import singleSpaVue, { type AppOptions } from "single-spa-vue";
 import { createApp, h } from "vue";
 import App from "./App.vue";
 
-// 2-1. singleSpaVue()の呼び出し
+// 1. singleSpaVue()の呼び出し
 
 // singleSpaVueでApp.vueインスタンスをラップする。
 const vueLifecycles = singleSpaVue({
@@ -24,7 +24,7 @@ const vueLifecycles = singleSpaVue({
   },
 });
 
-// 2-2. ライフサイクル関数を定義する
+// 2. ライフサイクル関数を定義する
 
 export const bootstrap = vueLifecycles.bootstrap; // 初期化時
 export const mount = vueLifecycles.mount; // マウント時

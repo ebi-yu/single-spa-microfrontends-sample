@@ -5,12 +5,14 @@ System.import("vue").then(() => {
   System.set(System.resolve("vue"), window.Vue);
 });
 
+// 1. 子アプリケーション(microfrontend)の登録
+
 /**
- * マイクロフロントエンドアプリケーションの登録を行う
+ * 子アプリケーション(microfrontend)の登録を行う
  * @params
  * name : アプリケーションの名前
- * app : 登録したいsingle-spaアプリケーションを渡す
- * activeWhen : 指定したURLにアクセスした時のみ、マイクロフロントエンドアプリケーションが活性化する。
+ * app : 登録したい子アプリケーション(microfrontend)を渡す
+ * activeWhen : 指定したURLにアクセスした時のみ、子アプリケーション(microfrontend)が活性化する。
  * customProps : 任意の値をアプリケーション渡せる。
  */
 registerApplication<Record<string, any>>({
@@ -30,8 +32,10 @@ registerApplication<Record<string, any>>({
   },
 });
 
+// 2. single-spaの起動
+
 /**
- * マイクロフロントエンドアプリケーションを起動する
+ * single-spaを起動する
  * @params
  * urlRerouteOnly : デフォルトでtrue。trueに設定すると、クライアント側のルートが変更されない限り、history.pushState()およびの呼び出しhistory.replaceState()はシングルSPAリルートをトリガーしません。
  */

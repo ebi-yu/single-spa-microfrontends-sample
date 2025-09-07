@@ -12,18 +12,18 @@
       {
         "imports": {
           "single-spa": "https://unpkg.com/single-spa@6.0.3/lib/es5/system/single-spa.min.js",
-          "vue-app": "http://localhost:4173/assets/0.0.2-main.js",
           "vue": "https://cdn.jsdelivr.net/npm/vue@3.5.21/dist/vue.global.min.js",
-          "react-app": "http://localhost:4174/assets/0.0.2-main.js",
           "react": "https://unpkg.com/react@18/umd/react.development.js",
           "react-dom": "https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+          "react-app": "http://localhost:4174/assets/0.0.2-main.js",
+          "vue-app": "http://localhost:4173/assets/0.0.2-main.js",
         }
       }
     </script>
   </head>
 
   <body>
-    <!-- 3. main.tsの呼び出し  -->
+    <!-- 3. スクリプトファイルの呼び出し  -->
     <script type="module" src="/src/main.ts"></script>
     <div class="header">
       <button

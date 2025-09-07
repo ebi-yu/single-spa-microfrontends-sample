@@ -3,12 +3,7 @@ import viteLogo from "../public/vite.svg";
 import "./App.css";
 import reactLogo from "./assets/react.svg";
 
-interface AppProps {
-  mountParcel?: (config: any, props: any) => any;
-  message?: string;
-}
-
-function App(props: AppProps) {
+function App(props: { mountParcel?: (config: any, props: any) => any; message?: string }) {
   const [count, setCount] = useState(0);
 
   return (
