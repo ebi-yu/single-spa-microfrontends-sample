@@ -19,7 +19,7 @@ export default defineConfig({
         assetFileNames: `assets/${version}-[name].[ext]`,
         format: "system",
       },
-      external: [],
+      external: ["react", "react-dom"],
       preserveEntrySignatures: "strict",
       plugins: [],
     },

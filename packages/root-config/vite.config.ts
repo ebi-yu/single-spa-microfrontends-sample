@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       port,
+      cors: true,
     },
     build: {
       lib: {

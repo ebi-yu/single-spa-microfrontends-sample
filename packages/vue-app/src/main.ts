@@ -14,6 +14,8 @@ const vueLifecycles = singleSpaVue({
     render(this: AppOptions) {
       return h(App, {
         mountParcel: this.mountParcel,
+        // カスタムのプロパティを渡す
+        message: this.message,
       });
     },
   },

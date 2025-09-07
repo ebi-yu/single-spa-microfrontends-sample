@@ -1,5 +1,10 @@
 import { registerApplication, start } from "single-spa";
 
+// Vueをグローバルに利用できるようにする
+System.import("vue").then(() => {
+  System.set(System.resolve("vue"), window.Vue);
+});
+
 /**
  * マイクロフロントエンドアプリケーションの登録を行う
  * @params
@@ -8,17 +13,21 @@ import { registerApplication, start } from "single-spa";
  * activeWhen : 指定したURLにアクセスした時のみ、マイクロフロントエンドアプリケーションが活性化する。
  * customProps : 任意の値をアプリケーション渡せる。
  */
-registerApplication<Record<string, never>>({
+registerApplication<Record<string, any>>({
   name: "vue-app",
   app: async () => System.import("vue-app"),
   activeWhen: ["/vue"],
-  customProps: {},
+  customProps: {
+    message: "Hello from Single-SPA Vue app!",
+  },
 });
-registerApplication<Record<string, never>>({
+registerApplication<Record<string, any>>({
   name: "react-app",
   app: async () => System.import("react-app"),
   activeWhen: ["/react"],
-  customProps: {},
+  customProps: {
+    message: "Hello from React app!",
+  },
 });
 
 /**

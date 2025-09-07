@@ -26,7 +26,7 @@ export default defineConfig({
         assetFileNames: `assets/${version}-[name].[ext]`,
         format: "system",
       },
-      external: [],
+      external: ["vue"],
       preserveEntrySignatures: "strict",
       plugins: [],
     },

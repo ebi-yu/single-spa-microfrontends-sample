@@ -3,12 +3,17 @@ import viteLogo from "../public/vite.svg";
 import "./App.css";
 import reactLogo from "./assets/react.svg";
 
-function App() {
+interface AppProps {
+  mountParcel?: (config: any, props: any) => any;
+  message?: string;
+}
+
+function App(props: AppProps) {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <div className="app">
+      <div id="react-app">
         <div>
           <a href="https://vite.dev" target="_blank">
             <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -18,6 +23,8 @@ function App() {
           </a>
         </div>
         <h1>Vite + React</h1>
+        {/* root-configからのメッセージを表示 */}
+        {props.message && <p className="root-message">{props.message}</p>}
         <div className="card">
           <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
           <p>

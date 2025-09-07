@@ -1,5 +1,5 @@
-.app {
-  width: 100vw;
+#react-app {
+  width: 95vw;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -39,4 +39,10 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.root-message {
+  font-weight: bold;
+  color: #61dafb;
+  margin: 1rem 0;
 }
